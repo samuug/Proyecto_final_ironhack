@@ -274,7 +274,7 @@ document.addEventListener("DOMContentLoaded", function() {
         } else if (valorSeleccionado > valorObjetivo) {
             return "lightcoral";
         } else {
-            return "lightsalmon";
+            return "lightblue";
         }
     }
       
