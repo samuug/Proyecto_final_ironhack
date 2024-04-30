@@ -258,23 +258,10 @@ document.addEventListener("DOMContentLoaded", function() {
         } else if (intentosRealizados === intentosMaximos) {
             // Mostrar mensaje de derrota y la información del piloto objetivo
             const derrotaMensaje = document.createElement("p");
-            derrotaMensaje.textContent = "¡Has perdido el juego!";
+            derrotaMensaje.textContent = "¡Has perdido el juego! El piloto que tenías que adivinar era: " + pilotoObjetivo.nombre;
             document.getElementById("game").appendChild(derrotaMensaje);
             document.getElementById("selectPilotos").style.display = "none";
-
-            // Mostrar información del piloto objetivo
-            mostrarInformacionPilotoObjetivo(pilotoObjetivo);
         }
-    }
-
-    function mostrarInformacionPilotoObjetivo(piloto) {
-    // Mostrar la información del piloto objetivo
-    document.getElementById("piloto").textContent = piloto.nombre;
-    document.getElementById("equipo").textContent = piloto.equipo;
-    document.getElementById("nacionalidad").textContent = piloto.nacionalidad;
-    document.getElementById("debut").textContent = piloto.año_comienzo;
-    document.getElementById("victorias").textContent = piloto.victorias;
-    document.getElementById("campeonatos").textContent = piloto.campeonatos;
     }
 
     function compararTexto(valorSeleccionado, valorObjetivo) {
